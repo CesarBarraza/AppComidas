@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.PlatoDescripcionActivity">
+
+    <include
+        android:id="@+id/toolbarDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarDescripcion"/>
+
+    <View
+        android:id="@+id/vIconFavorito"
+        app:layout_constraintRight_toRightOf="@+id/ivFoto"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFoto"
+        android:background="@mipmap/favorito_icon_home"
+        android:layout_margin="20sp"
+        android:layout_width="42sp"
+        android:layout_height="42sp"/>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/clTextView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@+id/ivFoto"
+       android:layout_margin="15sp">
+
+       <TextView
+           android:id="@+id/tvNombreComida"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintLeft_toLeftOf="parent"
+           android:textSize="22sp"
+           tools:ignore="MissingConstraints" />
+
+       <TextView
+           android:id="@+id/tvPrecio"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           android:textSize="18sp"/>
+
+       <TextView
+           android:id="@+id/tvDescripcion"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@+id/tvNombreComida"
+           app:layout_constraintLeft_toLeftOf="parent"
+           android:textSize="16sp"/>
+
+       <TextView
+           android:id="@+id/tvEstrella"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@+id/tvDescripcion"
+           app:layout_constraintLeft_toLeftOf="parent"
+           android:drawableLeft="@drawable/estrella_icon"
+           android:text="5.0"
+           android:gravity="center"
+           android:textSize="12sp"/>
+
+       <TextView
+           android:id="@+id/tvTipo"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintLeft_toRightOf="@+id/tvEstrella"
+           app:layout_constraintTop_toBottomOf="@id/tvDescripcion"
+           android:layout_marginLeft="15sp"
+           android:drawableLeft="@drawable/tilde_icon"
+           android:textSize="12sp"
+           android:gravity="center"/>
+
+       <TextView
+           android:id="@+id/tvListaIngredientes"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@+id/tvEstrella"
+           app:layout_constraintLeft_toLeftOf="parent"
+           android:text="Ingredientes"
+           android:textSize="16sp"
+           android:layout_marginTop="15sp"/>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rvIngredientes"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15sp"
+           app:layout_constraintTop_toBottomOf="@id/tvListaIngredientes"/>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

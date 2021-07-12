@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/tl_home"
+        android:title="" />
+    <item
+        android:id="@+id/bolsa"
+        android:icon="@drawable/tl_bolsa"
+        android:title=""/>
+    <item
+        android:id="@+id/lupa"
+        android:icon="@drawable/tl_lupa"
+        android:title=""/>
+    <item
+        android:id="@+id/user"
+        android:icon="@drawable/tl_user"
+        android:title=""
+        />
+</menu>

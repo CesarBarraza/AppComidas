@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">AppInfinixSoft</string>
+    <string name="titulo_login">LOGIN</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="email">Ingrese un email</string>
+    <string name="password">Ingrese password</string>
+    <string name="btn_ingresar">Login</string>
+    <string name="bienvenido_home">Bienvenido</string>
+    <string name="btn_registro">Sing Up</string>
+    <string name="nombre_usuario">Ingrese nombre de usuario</string>
+    <string name="saludo_home">¿Qué te gustaría pedir hoy?</string>
+    <string name="promociones_home">Promociones del día</string>
+    <string name="ver_mas">Ver más</string>
+    <string name="favortios">Favoritos</string>
+    <string name="oferta">Ofertas</string>
+    <string name="tendencias">Tendencias</string>
+    <string name="mas">Más</string>
+    <string name="terminos_condiciones">
+        I agree whith the Terms and <br /> Conditions
+    </string>
+
+    <string name="inicio">
+        Usted debe completar todos los datos para poder crear un usuario.
+    </string>
+</resources>

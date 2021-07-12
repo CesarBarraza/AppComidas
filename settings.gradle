@@ -1,0 +1,2 @@
+rootProject.name = "AppInfinixSoft"
+include ':app'
