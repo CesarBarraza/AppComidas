@@ -5,8 +5,9 @@ import android.os.Parcelable
 
 class Usuario(
     var nombre: String?, var apellido: String?, var username: String?,
-    var email: String?, var password:String?): Parcelable {
+    var email: String?, var password:String?, var confirmarPassword: String?): Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -20,6 +21,7 @@ class Usuario(
         parcel.writeString(username)
         parcel.writeString(email)
         parcel.writeString(password)
+        parcel.writeString(confirmarPassword)
     }
 
     override fun describeContents(): Int {

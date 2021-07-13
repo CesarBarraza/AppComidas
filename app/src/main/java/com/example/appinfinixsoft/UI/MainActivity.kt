@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import com.example.appinfinixsoft.data.local.SharedPreferencesManager
 import com.example.appinfinixsoft.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,10 +15,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         /*Checkea si el usuario ya esta logeado*/
-        SharedPreferencesManager.getUser(this)?.let {
+        /*SharedPreferencesManager.getUser(this)?.let {
             val intent = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(intent)
-        }
+        }*/
 
         /*Registro de usuario*/
         binding.btnRegistro.setOnClickListener {

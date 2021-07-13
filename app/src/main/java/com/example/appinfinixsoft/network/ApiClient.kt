@@ -11,7 +11,7 @@ import retrofit2.http.Path
 
 object ApiClient {
     private const val API_BASE_URL ="https://api.spoonacular.com/recipes/"
-    private const val API_KEY ="?apiKey=3d3f4c1c1377490aa1789adfb8c241bf"
+    private const val API_KEY ="?apiKey=b506f413c4ac43e5bfee812d1d8b192d"
 
     private var appInterface : AppService
     private var retrofitAdapter : Retrofit = Builder()

@@ -5,6 +5,7 @@
     <string name="apellido">Apellido</string>
     <string name="email">Ingrese un email</string>
     <string name="password">Ingrese password</string>
+    <string name="confirmar_password">Confirmar Password</string>
     <string name="btn_ingresar">Login</string>
     <string name="bienvenido_home">Bienvenido</string>
     <string name="btn_registro">Sing Up</string>

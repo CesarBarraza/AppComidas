@@ -34,17 +34,20 @@ class RegistroActivity : AppCompatActivity() {
                 apellido = binding.txtApellido.text.toString(),
                 username = binding.txtNombreUsuario.text.toString(),
                 email = binding.txtEmail.text.toString(),
-                password = binding.txtPassword.text.toString()
+                password = binding.txtPassword.text.toString(),
+                confirmarPassword = binding.txtConfirmarPassword.text.toString()
+
             )
-            if(valoresVacios()){
-                mensajeValoresVacios()
-            }else{
-                if(binding.btnCheck.isChecked){
+            /*Aqui se validan los datos que el usuario ingresa al registrarse*/
+            when{
+                valoresVacios() -> mensajeValoresVacios()
+                binding.txtPassword.text.toString() != binding.txtConfirmarPassword.text.toString()
+                -> passwordDiferente()
+                !binding.btnCheck.isChecked -> mensajeCheckTerminosCondiciones()
+                else -> {
                     SharedPreferencesManager.saveUser(this, usuario)
                     val intent = Intent(this@RegistroActivity, LoginActivity::class.java)
                     startActivity(intent)
-                }else {
-                    mensajeCheckTerminosCondiciones()
                 }
             }
         }
@@ -71,6 +74,15 @@ class RegistroActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("ATENCIÓN!!!")
         builder.setMessage("Todos los campos son necesarios para crear un usuario!!!")
+        val dialog = builder.create()
+        dialog.show()
+    }
+
+    /*Mensaje de password diferente a confirmar password*/
+    fun passwordDiferente(){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("ATENCIÓN!!!")
+        builder.setMessage("Los passwords ingresados son diferentes!!!")
         val dialog = builder.create()
         dialog.show()
     }
