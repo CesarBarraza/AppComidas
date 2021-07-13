@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    /*función modal de datos login incorrectos*/
+    /*Mensaje de datos incorrectos*/
     private fun mostrarMensaje(){
         val builder = AlertDialog.Builder(this)
         builder.setTitle("MENSAJE")

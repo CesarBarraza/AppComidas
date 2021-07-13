@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.appinfinixsoft.UI.PlatoDescripcionActivity.Companion.KEY_ID
+import com.example.appinfinixsoft.UI.PlatoDescripcionActivity.Companion.PLATO_KEY_ID
 import com.example.appinfinixsoft.adapters.PlatoHomeAdapter
 import com.example.appinfinixsoft.data.entity.PlatoResponse
 import com.example.appinfinixsoft.data.entity.Result
@@ -71,7 +71,7 @@ class HomeActivity : AppCompatActivity(), PlatoHomeAdapter.onItemClickListener {
     /*Función que envia el id del plato selecciona en la lista*/
     override fun onItemClick(item: Result, position: Int) {
         val intent = Intent(this@HomeActivity, PlatoDescripcionActivity::class.java)
-        intent.putExtra(KEY_ID, item.id)
+        intent.putExtra(PLATO_KEY_ID, item.id)
         startActivity(intent)
     }
 }

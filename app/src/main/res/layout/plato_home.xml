@@ -8,11 +8,9 @@
     app:cardCornerRadius="15dp"
     android:layout_margin="10dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/ivFoto"
@@ -58,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvDescripcion"
                 android:text="$30.00"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="@color/black"/>
 
 
@@ -76,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:text="ver detalle"
                 android:backgroundTint="#EDA345"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:textSize="12sp"
                 android:layout_below="@+id/tvDescripcion"/>
         </RelativeLayout>

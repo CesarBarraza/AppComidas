@@ -35,9 +35,8 @@ class RegistroActivity : AppCompatActivity() {
                 username = binding.txtNombreUsuario.text.toString(),
                 email = binding.txtEmail.text.toString(),
                 password = binding.txtPassword.text.toString(),
-                confirmarPassword = binding.txtConfirmarPassword.text.toString()
+                confirmarPassword = binding.txtConfirmarPassword.text.toString())
 
-            )
             /*Aqui se validan los datos que el usuario ingresa al registrarse*/
             when{
                 valoresVacios() -> mensajeValoresVacios()
@@ -47,12 +46,13 @@ class RegistroActivity : AppCompatActivity() {
                 else -> {
                     SharedPreferencesManager.saveUser(this, usuario)
                     val intent = Intent(this@RegistroActivity, LoginActivity::class.java)
+                    limpiarCampos()
                     startActivity(intent)
                 }
             }
         }
     }
-     /*Verifica que todos los campos esten completos en el registro*/
+    /*Verifica que todos los campos esten completos en el registro*/
     private fun valoresVacios(): Boolean{
         return binding.txtNombre.text.isNullOrEmpty() &&
                 binding.txtApellido.text.isNullOrEmpty() &&
@@ -60,7 +60,16 @@ class RegistroActivity : AppCompatActivity() {
                 binding.txtPassword.text.isNullOrEmpty()
     }
 
-    /*Función para checkear si se aceptarón los terminos y condiciones*/
+    /*Función para limpiar los campos una vez registrado*/
+    private fun limpiarCampos(){
+        binding.txtNombre.text?.clear()
+        binding.txtApellido.text?.clear()
+        binding.txtNombreUsuario.text?.clear()
+        binding.txtPassword.text?.clear()
+        binding.txtConfirmarPassword.text?.clear()
+    }
+
+    /*Mensaje que se muestra cundo no se aceptan los terminos y condiciones*/
     private fun mensajeCheckTerminosCondiciones() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("ATENCIÓN!!!")

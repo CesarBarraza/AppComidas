@@ -57,7 +57,6 @@ class PlatoHomeAdapter(var items: List<Result>, var clickListener:
                 .load(plato.image)
                 .into(binding.ivFoto)
         }
-
     }
 
     interface onItemClickListener {

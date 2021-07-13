@@ -19,35 +19,32 @@
             android:layout_height="wrap_content"
             android:background="@drawable/circulo"
             android:text="JI. Jayakatwang no 301"
-            android:drawableRight="@drawable/pico_abajo_icon"
+            android:drawableEnd="@drawable/pico_abajo_icon"
             android:padding="10dp"
             android:textSize="16sp"
             android:layout_centerVertical="true"/>
-
         <View
             android:id="@+id/vCampana"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:background="@mipmap/campana_icon"/>
-
         <View
             android:id="@+id/vNotificacion"
             android:layout_width="14sp"
             android:layout_height="14sp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignBottom="@+id/vCampana"
             android:background="@mipmap/notificacion_icon"/>
     </RelativeLayout>
-
 
     <TextView
         android:id="@+id/tvUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/rlToolbar"
-        android:textSize="28dp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:gravity="left"
@@ -59,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvUsuario"
         android:layout_marginTop="10dp"
         android:textColor="#8C8A8A"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_margin="10dp"
         android:text="@string/saludo_home"/>
 
@@ -138,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/llNombreIcon"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="@string/promociones_home"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:layout_margin="10dp"
         android:textColor="@color/black"/>
 
@@ -150,7 +147,7 @@
         app:layout_constraintTop_toTopOf="@id/tvTituloPromocion"
         app:layout_constraintBottom_toBottomOf="@id/tvTituloPromocion"
         android:text="@string/ver_mas"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:layout_margin="10dp"
         android:textColor="#E84C4F"/>
 

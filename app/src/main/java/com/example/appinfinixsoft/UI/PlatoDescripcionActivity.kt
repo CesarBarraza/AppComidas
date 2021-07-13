@@ -19,7 +19,7 @@ import retrofit2.Response
 class PlatoDescripcionActivity : AppCompatActivity() {
 
     companion object {
-        const val KEY_ID: String = "infinixSoft.idPlato"
+        const val PLATO_KEY_ID: String = "infinixSoft.idPlato"
     }
 
     private lateinit var binding: ActivityPlatoDescripcionBinding
@@ -38,13 +38,11 @@ class PlatoDescripcionActivity : AppCompatActivity() {
         val id: Bundle? = intent.extras
 
         val call = id?.let {
-            ApiClient.getServiceClient().getPlatoDescripcion(it.getInt(KEY_ID))
+            ApiClient.getServiceClient().getPlatoDescripcion(it.getInt(PLATO_KEY_ID))
         }
-
         val callback =  object :Callback<Recipe>{
             override fun onResponse(call: Call<Recipe>, response: Response<Recipe>) {
                 if(response.isSuccessful){
-
                     response.body()?.let {
                         plato ->
                         val toolbar = binding.toolbarDescripcion.toolbar

@@ -26,9 +26,12 @@ object ApiClient {
     fun getServiceClient() = appInterface
 
     interface AppService {
+
+        /*Obteinen una lista de platos*/
         @GET("complexSearch${API_KEY}")
         fun getPlato() : Call<PlatoResponse>
 
+        /*Obtiene un plato*/
         @GET("${API_BASE_URL}/{id}/information${API_KEY}")
         fun getPlatoDescripcion(@Path("id") id: Int): Call<Recipe>
     }
