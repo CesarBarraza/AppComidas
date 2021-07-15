@@ -31,11 +31,18 @@ class LoginActivity : AppCompatActivity() {
             if(usuario?.username == binding.txtNombreUsuario.text.toString()
                 && usuario?.password == binding.txtPassword.text.toString()){
                 val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                limpiarCampos()
                 startActivity(intent)
             }else{
                 mostrarMensaje()
             }
         }
+    }
+
+    /*Función para limpiar los datos una vez legeado*/
+    private fun limpiarCampos(){
+        binding.txtNombreUsuario.text?.clear()
+        binding.txtPassword.text?.clear()
     }
 
     /*Mensaje de datos incorrectos*/
